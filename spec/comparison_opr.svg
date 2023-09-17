@@ -1,0 +1,115 @@
+<svg class="railroad-diagram" width="208" height="214" viewBox="0 0 208 214" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 45v20m0 -10h20"></path>
+</g>
+<path d="M40 55h10"></path>
+<g>
+<path d="M50 55h0"></path>
+<path d="M158 55h0"></path>
+<rect x="50" y="36" width="108" height="158" rx="10" ry="10" class="group-box"></rect>
+<g>
+<path d="M50 55h7"></path>
+<path d="M151 55h7"></path>
+<path d="M57 55h20"></path>
+<g class="terminal ">
+<path d="M77 55h4.25"></path>
+<path d="M126.75 55h4.25"></path>
+<rect x="81.25" y="44" width="45.5" height="22" rx="10" ry="10"></rect>
+<text x="104" y="59">">"</text>
+</g>
+<path d="M131 55h20"></path>
+<path d="M57 55a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M77 85h4.25"></path>
+<path d="M126.75 85h4.25"></path>
+<rect x="81.25" y="74" width="45.5" height="22" rx="10" ry="10"></rect>
+<text x="104" y="89">"&#60;"</text>
+</g>
+<path d="M131 85a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+<path d="M57 55a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M77 115h0"></path>
+<path d="M131 115h0"></path>
+<rect x="77" y="104" width="54" height="22" rx="10" ry="10"></rect>
+<text x="104" y="119">"=="</text>
+</g>
+<path d="M131 115a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+<path d="M57 55a10 10 0 0 1 10 10v70a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M77 145h0"></path>
+<path d="M131 145h0"></path>
+<rect x="77" y="134" width="54" height="22" rx="10" ry="10"></rect>
+<text x="104" y="149">">="</text>
+</g>
+<path d="M131 145a10 10 0 0 0 10 -10v-70a10 10 0 0 1 10 -10"></path>
+<path d="M57 55a10 10 0 0 1 10 10v100a10 10 0 0 0 10 10"></path>
+<g class="terminal ">
+<path d="M77 175h0"></path>
+<path d="M131 175h0"></path>
+<rect x="77" y="164" width="54" height="22" rx="10" ry="10"></rect>
+<text x="104" y="179">"&#60;="</text>
+</g>
+<path d="M131 175a10 10 0 0 0 10 -10v-100a10 10 0 0 1 10 -10"></path>
+</g>
+<g class="comment ">
+<path d="M50 28h0"></path>
+<path d="M158 28h0"></path>
+<text x="104" y="33" class="comment">comparison_opr</text>
+</g>
+</g>
+<path d="M158 55h10"></path>
+<path d="M 168 55 h 20 m 0 -10 v 20"></path>
+</g>
+<style>
+	svg {
+		background-color: hsl(30,20%,95%);
+	}
+	path {
+		stroke-width: 3;
+		stroke: black;
+		fill: rgba(0,0,0,0);
+	}
+	text {
+		font: bold 14px monospace;
+		text-anchor: middle;
+		white-space: pre;
+	}
+	text.diagram-text {
+		font-size: 12px;
+	}
+	text.diagram-arrow {
+		font-size: 16px;
+	}
+	text.label {
+		text-anchor: start;
+	}
+	text.comment {
+		font: italic 12px monospace;
+	}
+	g.non-terminal text {
+		/*font-style: italic;*/
+	}
+	rect {
+		stroke-width: 3;
+		stroke: black;
+		fill: hsl(120,100%,90%);
+	}
+	rect.group-box {
+		stroke: gray;
+		stroke-dasharray: 10 5;
+		fill: none;
+	}
+	path.diagram-text {
+		stroke-width: 3;
+		stroke: black;
+		fill: white;
+		cursor: help;
+	}
+	.decision path {
+    fill: #ccc;
+  }
+	g.diagram-text:hover path.diagram-text {
+		fill: #eee;
+	}</style>
+</svg>

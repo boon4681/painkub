@@ -1,0 +1,23 @@
+let x
+let y = 50
+x = 0
+x = (5 + 10) * 5 + 10
+x = "Hello"
+x = 'HI'
+x = 1
+
+if x > 0 {
+    print(x)
+}
+
+while x < 10 or x == 0 {
+    x += 1
+}
+
+for i in 1..5 {
+   print(i)
+}
+
+fun test() {
+    return 10
+}

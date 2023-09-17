@@ -1,0 +1,6 @@
+let kub
+let y = 50
+
+y = 10 + 12 * 5 / 10;
+
+print("HI")

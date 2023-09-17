@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+<title>Preview</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin: 0 auto;
+    font-family: "Inter",sans-serif
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 10px
+}
+img {
+    width: 300px
+}
+g {
+    color:#009c00
+}
+</style>
+</head>
+<body><div class="block">
+    <span><b id="kub">kub</b>: used by </span>
+    <span> = ws statement ws</span>
+<!--    <img src="kub.svg"  alt="kub"/>-->
+</div><div class="block">
+    <span><b id="statement">statement</b>: used by <a href='#kub'>kub</a>, <a href='#block'>block</a></span>
+    <span> = stmt (stmt ws)*</span>
+<!--    <img src="statement.svg"  alt="statement"/>-->
+</div><div class="block">
+    <span><b id="stmt">stmt</b>: used by <a href='#statement'>statement</a></span>
+    <span> = declaration / function_call / if_stmt / while_stmt / for_stmt / assign / return_stmt</span>
+<!--    <img src="stmt.svg"  alt="stmt"/>-->
+</div><div class="block">
+    <span><b id="assign">assign</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = ident WS [+\-*\/]?<g>"="</g> WS (literal / ident / expression)</span>
+<!--    <img src="assign.svg"  alt="assign"/>-->
+</div><div class="block">
+    <span><b id="if_stmt">if_stmt</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = <g>"if"</g> WS condition ws block</span>
+<!--    <img src="if_stmt.svg"  alt="if_stmt"/>-->
+</div><div class="block">
+    <span><b id="while_stmt">while_stmt</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = <g>"while"</g> WS condition ws block</span>
+<!--    <img src="while_stmt.svg"  alt="while_stmt"/>-->
+</div><div class="block">
+    <span><b id="for_stmt">for_stmt</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = <g>"for"</g> WS ident WS <g>"in"</g> WS range_expr ws block</span>
+<!--    <img src="for_stmt.svg"  alt="for_stmt"/>-->
+</div><div class="block">
+    <span><b id="return_stmt">return_stmt</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = <g>"return"</g> <g>" "</g> expression</span>
+<!--    <img src="return_stmt.svg"  alt="return_stmt"/>-->
+</div><div class="block">
+    <span><b id="function_call">function_call</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = ident <g>"("</g> ws func_params ws <g>")"</g></span>
+<!--    <img src="function_call.svg"  alt="function_call"/>-->
+</div><div class="block">
+    <span><b id="func_params">func_params</b>: used by <a href='#function_call'>function_call</a></span>
+    <span> = (literal / ident) (ws <g>","</g> ws (literal / ident))*</span>
+<!--    <img src="func_params.svg"  alt="func_params"/>-->
+</div><div class="block">
+    <span><b id="condition">condition</b>: used by <a href='#if_stmt'>if_stmt</a>, <a href='#while_stmt'>while_stmt</a></span>
+    <span> = disjunction</span>
+<!--    <img src="condition.svg"  alt="condition"/>-->
+</div><div class="block">
+    <span><b id="disjunction">disjunction</b>: used by <a href='#condition'>condition</a></span>
+    <span> = conjunction (ws <g>"or"</g> ws conjunction)*</span>
+<!--    <img src="disjunction.svg"  alt="disjunction"/>-->
+</div><div class="block">
+    <span><b id="conjunction">conjunction</b>: used by <a href='#disjunction'>disjunction</a></span>
+    <span> = comparison (ws <g>"and"</g> ws comparison)*</span>
+<!--    <img src="conjunction.svg"  alt="conjunction"/>-->
+</div><div class="block">
+    <span><b id="comparison">comparison</b>: used by <a href='#conjunction'>conjunction</a></span>
+    <span> = expression ws comparison_opr ws expression</span>
+<!--    <img src="comparison.svg"  alt="comparison"/>-->
+</div><div class="block">
+    <span><b id="comparison_opr">comparison_opr</b>: used by <a href='#comparison'>comparison</a></span>
+    <span> = <g>">"</g> / <g>"<"</g> / <g>"=="</g> / <g>">="</g> / <g>"<="</g></span>
+<!--    <img src="comparison_opr.svg"  alt="comparison_opr"/>-->
+</div><div class="block">
+    <span><b id="block">block</b>: used by <a href='#if_stmt'>if_stmt</a>, <a href='#while_stmt'>while_stmt</a>, <a href='#for_stmt'>for_stmt</a>, <a href='#function_declaration'>function_declaration</a></span>
+    <span> = <g>"{"</g> ws statement ws <g>"}"</g></span>
+<!--    <img src="block.svg"  alt="block"/>-->
+</div><div class="block">
+    <span><b id="expression">expression</b>: used by <a href='#assign'>assign</a>, <a href='#return_stmt'>return_stmt</a>, <a href='#comparison'>comparison</a>, <a href='#parenthesized_expr'>parenthesized_expr</a></span>
+    <span> = additive_expr</span>
+<!--    <img src="expression.svg"  alt="expression"/>-->
+</div><div class="block">
+    <span><b id="range_expr">range_expr</b>: used by <a href='#for_stmt'>for_stmt</a></span>
+    <span> = additive_expr <g>".."</g> additive_expr</span>
+<!--    <img src="range_expr.svg"  alt="range_expr"/>-->
+</div><div class="block">
+    <span><b id="parenthesized_expr">parenthesized_expr</b>: used by <a href='#primary_expr'>primary_expr</a></span>
+    <span> = <g>"("</g> ws expression ws <g>")"</g></span>
+<!--    <img src="parenthesized_expr.svg"  alt="parenthesized_expr"/>-->
+</div><div class="block">
+    <span><b id="additive_expr">additive_expr</b>: used by <a href='#expression'>expression</a>, <a href='#range_expr'>range_expr</a></span>
+    <span> = multiplicative_expr (ws additive_opr ws multiplicative_expr)*</span>
+<!--    <img src="additive_expr.svg"  alt="additive_expr"/>-->
+</div><div class="block">
+    <span><b id="multiplicative_expr">multiplicative_expr</b>: used by <a href='#additive_expr'>additive_expr</a></span>
+    <span> = primary_expr (ws multiplicative_opr ws primary_expr)*</span>
+<!--    <img src="multiplicative_expr.svg"  alt="multiplicative_expr"/>-->
+</div><div class="block">
+    <span><b id="primary_expr">primary_expr</b>: used by <a href='#multiplicative_expr'>multiplicative_expr</a></span>
+    <span> = parenthesized_expr / literal / ident</span>
+<!--    <img src="primary_expr.svg"  alt="primary_expr"/>-->
+</div><div class="block">
+    <span><b id="additive_opr">additive_opr</b>: used by <a href='#additive_expr'>additive_expr</a></span>
+    <span> = <g>"+"</g> / <g>"-"</g></span>
+<!--    <img src="additive_opr.svg"  alt="additive_opr"/>-->
+</div><div class="block">
+    <span><b id="multiplicative_opr">multiplicative_opr</b>: used by <a href='#multiplicative_expr'>multiplicative_expr</a></span>
+    <span> = <g>"*"</g> / <g>"/"</g></span>
+<!--    <img src="multiplicative_opr.svg"  alt="multiplicative_opr"/>-->
+</div><div class="block">
+    <span><b id="declaration">declaration</b>: used by <a href='#stmt'>stmt</a></span>
+    <span> = function_declaration / variable_declaration</span>
+<!--    <img src="declaration.svg"  alt="declaration"/>-->
+</div><div class="block">
+    <span><b id="function_declaration">function_declaration</b>: used by <a href='#declaration'>declaration</a></span>
+    <span> = <g>"fun"</g> WS ident ws <g>"("</g> ws ws <g>")"</g> ws block</span>
+<!--    <img src="function_declaration.svg"  alt="function_declaration"/>-->
+</div><div class="block">
+    <span><b id="variable_declaration">variable_declaration</b>: used by <a href='#declaration'>declaration</a></span>
+    <span> = <g>"let"</g> WS ident ws <g>"="</g> ws literal / <g>"let"</g> WS ident ws</span>
+<!--    <img src="variable_declaration.svg"  alt="variable_declaration"/>-->
+</div><div class="block">
+    <span><b id="literal">literal</b>: used by <a href='#assign'>assign</a>, <a href='#func_params'>func_params</a>, <a href='#primary_expr'>primary_expr</a>, <a href='#variable_declaration'>variable_declaration</a></span>
+    <span> = number / string</span>
+<!--    <img src="literal.svg"  alt="literal"/>-->
+</div><div class="block">
+    <span><b id="number">number</b>: used by <a href='#literal'>literal</a></span>
+    <span> = [+-]? (int / float)</span>
+<!--    <img src="number.svg"  alt="number"/>-->
+</div><div class="block">
+    <span><b id="int">int</b>: used by <a href='#number'>number</a>, <a href='#float'>float</a></span>
+    <span> = [1-9][0-9]+ / [0-9]</span>
+<!--    <img src="int.svg"  alt="int"/>-->
+</div><div class="block">
+    <span><b id="float">float</b>: used by <a href='#number'>number</a></span>
+    <span> = int <g>"."</g> [0-9]+</span>
+<!--    <img src="float.svg"  alt="float"/>-->
+</div><div class="block">
+    <span><b id="string">string</b>: used by <a href='#literal'>literal</a>, <a href='#single_quote_string'>single_quote_string</a>, <a href='#double_quote_string'>double_quote_string</a></span>
+    <span> = double_quote_string / single_quote_string</span>
+<!--    <img src="string.svg"  alt="string"/>-->
+</div><div class="block">
+    <span><b id="single_quote_string">single_quote_string</b>: used by <a href='#string'>string</a></span>
+    <span> = <g>"'"</g> (escape_string / single_quote_char_string)* <g>"'"</g></span>
+<!--    <img src="single_quote_string.svg"  alt="single_quote_string"/>-->
+</div><div class="block">
+    <span><b id="single_quote_char_string">single_quote_char_string</b>: used by <a href='#single_quote_string'>single_quote_string</a></span>
+    <span> = [^\\\t\r\n\"\']</span>
+<!--    <img src="single_quote_char_string.svg"  alt="single_quote_char_string"/>-->
+</div><div class="block">
+    <span><b id="double_quote_string">double_quote_string</b>: used by <a href='#string'>string</a></span>
+    <span> = '<g>"' (escape_string / double_quote_char_string)* '"</g>'</span>
+<!--    <img src="double_quote_string.svg"  alt="double_quote_string"/>-->
+</div><div class="block">
+    <span><b id="double_quote_char_string">double_quote_char_string</b>: used by <a href='#double_quote_string'>double_quote_string</a></span>
+    <span> = [^\\\t\r\n\"\']</span>
+<!--    <img src="double_quote_char_string.svg"  alt="double_quote_char_string"/>-->
+</div><div class="block">
+    <span><b id="escape_string">escape_string</b>: used by <a href='#single_quote_string'>single_quote_string</a>, <a href='#double_quote_string'>double_quote_string</a></span>
+    <span> = '\\' [tbrn"'\\]</span>
+<!--    <img src="escape_string.svg"  alt="escape_string"/>-->
+</div><div class="block">
+    <span><b id="ident">ident</b>: used by <a href='#assign'>assign</a>, <a href='#for_stmt'>for_stmt</a>, <a href='#function_call'>function_call</a>, <a href='#func_params'>func_params</a>, <a href='#primary_expr'>primary_expr</a>, <a href='#function_declaration'>function_declaration</a>, <a href='#variable_declaration'>variable_declaration</a></span>
+    <span> = [a-zA-Z_][a-zA-Z_0-9]*</span>
+<!--    <img src="ident.svg"  alt="ident"/>-->
+</div><div class="block">
+    <span><b id="WS">WS</b>: used by <a href='#assign'>assign</a>, <a href='#if_stmt'>if_stmt</a>, <a href='#while_stmt'>while_stmt</a>, <a href='#for_stmt'>for_stmt</a>, <a href='#function_declaration'>function_declaration</a>, <a href='#variable_declaration'>variable_declaration</a></span>
+    <span> <g>"whitespace"</g></span>
+<!--    <img src="WS.svg"  alt="WS"/>-->
+</div><div class="block">
+    <span><b id="ws">ws</b>: used by <a href='#kub'>kub</a>, <a href='#statement'>statement</a>, <a href='#if_stmt'>if_stmt</a>, <a href='#while_stmt'>while_stmt</a>, <a href='#for_stmt'>for_stmt</a>, <a href='#function_call'>function_call</a>, <a href='#func_params'>func_params</a>, <a href='#disjunction'>disjunction</a>, <a href='#conjunction'>conjunction</a>, <a href='#comparison'>comparison</a>, <a href='#block'>block</a>, <a href='#parenthesized_expr'>parenthesized_expr</a>, <a href='#additive_expr'>additive_expr</a>, <a href='#multiplicative_expr'>multiplicative_expr</a>, <a href='#function_declaration'>function_declaration</a>, <a href='#variable_declaration'>variable_declaration</a></span>
+    <span> <g>"whitespace"</g></span>
+<!--    <img src="ws.svg"  alt="ws"/>-->
+</div></body></html>

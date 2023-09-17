@@ -1,0 +1,131 @@
+<svg class="railroad-diagram" width="270.5" height="274" viewBox="0 0 270.5 274" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 45v20m0 -10h20"></path>
+</g>
+<path d="M40 55h10"></path>
+<g>
+<path d="M50 55h0"></path>
+<path d="M220.5 55h0"></path>
+<rect x="50" y="36" width="170.5" height="218" rx="10" ry="10" class="group-box"></rect>
+<g>
+<path d="M50 55h0"></path>
+<path d="M220.5 55h0"></path>
+<path d="M50 55h20"></path>
+<g class="non-terminal ">
+<path d="M70 55h8.5"></path>
+<path d="M192 55h8.5"></path>
+<rect x="78.5" y="44" width="113.5" height="22"></rect>
+<text x="135.25" y="59">declaration</text>
+</g>
+<path d="M200.5 55h20"></path>
+<path d="M50 55a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 85h0"></path>
+<path d="M200.5 85h0"></path>
+<rect x="70" y="74" width="130.5" height="22"></rect>
+<text x="135.25" y="89">function_call</text>
+</g>
+<path d="M200.5 85a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+<path d="M50 55a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 115h25.5"></path>
+<path d="M175 115h25.5"></path>
+<rect x="95.5" y="104" width="79.5" height="22"></rect>
+<text x="135.25" y="119">if_stmt</text>
+</g>
+<path d="M200.5 115a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+<path d="M50 55a10 10 0 0 1 10 10v70a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 145h12.75"></path>
+<path d="M187.75 145h12.75"></path>
+<rect x="82.75" y="134" width="105" height="22"></rect>
+<text x="135.25" y="149">while_stmt</text>
+</g>
+<path d="M200.5 145a10 10 0 0 0 10 -10v-70a10 10 0 0 1 10 -10"></path>
+<path d="M50 55a10 10 0 0 1 10 10v100a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 175h21.25"></path>
+<path d="M179.25 175h21.25"></path>
+<rect x="91.25" y="164" width="88" height="22"></rect>
+<text x="135.25" y="179">for_stmt</text>
+</g>
+<path d="M200.5 175a10 10 0 0 0 10 -10v-100a10 10 0 0 1 10 -10"></path>
+<path d="M50 55a10 10 0 0 1 10 10v130a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 205h29.75"></path>
+<path d="M170.75 205h29.75"></path>
+<rect x="99.75" y="194" width="71" height="22"></rect>
+<text x="135.25" y="209">assign</text>
+</g>
+<path d="M200.5 205a10 10 0 0 0 10 -10v-130a10 10 0 0 1 10 -10"></path>
+<path d="M50 55a10 10 0 0 1 10 10v160a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M70 235h8.5"></path>
+<path d="M192 235h8.5"></path>
+<rect x="78.5" y="224" width="113.5" height="22"></rect>
+<text x="135.25" y="239">return_stmt</text>
+</g>
+<path d="M200.5 235a10 10 0 0 0 10 -10v-160a10 10 0 0 1 10 -10"></path>
+</g>
+<g class="comment ">
+<path d="M50 28h0"></path>
+<path d="M88 28h0"></path>
+<text x="69" y="33" class="comment">stmt</text>
+</g>
+</g>
+<path d="M220.5 55h10"></path>
+<path d="M 230.5 55 h 20 m 0 -10 v 20"></path>
+</g>
+<style>
+	svg {
+		background-color: hsl(30,20%,95%);
+	}
+	path {
+		stroke-width: 3;
+		stroke: black;
+		fill: rgba(0,0,0,0);
+	}
+	text {
+		font: bold 14px monospace;
+		text-anchor: middle;
+		white-space: pre;
+	}
+	text.diagram-text {
+		font-size: 12px;
+	}
+	text.diagram-arrow {
+		font-size: 16px;
+	}
+	text.label {
+		text-anchor: start;
+	}
+	text.comment {
+		font: italic 12px monospace;
+	}
+	g.non-terminal text {
+		/*font-style: italic;*/
+	}
+	rect {
+		stroke-width: 3;
+		stroke: black;
+		fill: hsl(120,100%,90%);
+	}
+	rect.group-box {
+		stroke: gray;
+		stroke-dasharray: 10 5;
+		fill: none;
+	}
+	path.diagram-text {
+		stroke-width: 3;
+		stroke: black;
+		fill: white;
+		cursor: help;
+	}
+	.decision path {
+    fill: #ccc;
+  }
+	g.diagram-text:hover path.diagram-text {
+		fill: #eee;
+	}</style>
+</svg>

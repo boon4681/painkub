@@ -1,0 +1,138 @@
+<svg class="railroad-diagram" width="741" height="112" viewBox="0 0 741 112" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 54v20m0 -10h20"></path>
+</g>
+<path d="M40 64h10"></path>
+<g>
+<path d="M50 64h0"></path>
+<path d="M691 64h0"></path>
+<rect x="50" y="36" width="641" height="56" rx="10" ry="10" class="group-box"></rect>
+<g>
+<path d="M50 64h10"></path>
+<path d="M681 64h10"></path>
+<path d="M182 64h10"></path>
+<g class="non-terminal ">
+<path d="M60 64h0"></path>
+<path d="M182 64h0"></path>
+<rect x="60" y="53" width="122" height="22"></rect>
+<text x="121" y="68">primary_expr</text>
+</g>
+<g>
+<path d="M192 64h0"></path>
+<path d="M681 64h0"></path>
+<path d="M192 64a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M212 44h449"></path>
+</g>
+<path d="M661 44a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M192 64h20"></path>
+<g>
+<path d="M212 64h0"></path>
+<path d="M661 64h0"></path>
+<path d="M222 64a10 10 0 0 0 -10 10v0a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M222 84h429"></path>
+</g>
+<path d="M651 84a10 10 0 0 0 10 -10v0a10 10 0 0 0 -10 -10"></path>
+<path d="M212 64h10"></path>
+<path d="M651 64h10"></path>
+<g>
+<path d="M222 64h0"></path>
+<path d="M651 64h0"></path>
+<path d="M259 64h10"></path>
+<g class="non-terminal ">
+<path d="M222 64h0"></path>
+<path d="M259 64h0"></path>
+<rect x="222" y="53" width="37" height="22"></rect>
+<text x="240.5" y="68">ws</text>
+</g>
+<path d="M269 64h10"></path>
+<path d="M452 64h10"></path>
+<g class="non-terminal ">
+<path d="M279 64h0"></path>
+<path d="M452 64h0"></path>
+<rect x="279" y="53" width="173" height="22"></rect>
+<text x="365.5" y="68">multiplicative_opr</text>
+</g>
+<path d="M462 64h10"></path>
+<path d="M509 64h10"></path>
+<g class="non-terminal ">
+<path d="M472 64h0"></path>
+<path d="M509 64h0"></path>
+<rect x="472" y="53" width="37" height="22"></rect>
+<text x="490.5" y="68">ws</text>
+</g>
+<path d="M519 64h10"></path>
+<g class="non-terminal ">
+<path d="M529 64h0"></path>
+<path d="M651 64h0"></path>
+<rect x="529" y="53" width="122" height="22"></rect>
+<text x="590" y="68">primary_expr</text>
+</g>
+</g>
+</g>
+<path d="M661 64h20"></path>
+</g>
+</g>
+<g class="comment ">
+<path d="M50 28h0"></path>
+<path d="M193 28h0"></path>
+<text x="121.5" y="33" class="comment">multiplicative_expr</text>
+</g>
+</g>
+<path d="M691 64h10"></path>
+<path d="M 701 64 h 20 m 0 -10 v 20"></path>
+</g>
+<style>
+	svg {
+		background-color: hsl(30,20%,95%);
+	}
+	path {
+		stroke-width: 3;
+		stroke: black;
+		fill: rgba(0,0,0,0);
+	}
+	text {
+		font: bold 14px monospace;
+		text-anchor: middle;
+		white-space: pre;
+	}
+	text.diagram-text {
+		font-size: 12px;
+	}
+	text.diagram-arrow {
+		font-size: 16px;
+	}
+	text.label {
+		text-anchor: start;
+	}
+	text.comment {
+		font: italic 12px monospace;
+	}
+	g.non-terminal text {
+		/*font-style: italic;*/
+	}
+	rect {
+		stroke-width: 3;
+		stroke: black;
+		fill: hsl(120,100%,90%);
+	}
+	rect.group-box {
+		stroke: gray;
+		stroke-dasharray: 10 5;
+		fill: none;
+	}
+	path.diagram-text {
+		stroke-width: 3;
+		stroke: black;
+		fill: white;
+		cursor: help;
+	}
+	.decision path {
+    fill: #ccc;
+  }
+	g.diagram-text:hover path.diagram-text {
+		fill: #eee;
+	}</style>
+</svg>

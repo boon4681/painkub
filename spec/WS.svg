@@ -1,0 +1,99 @@
+<svg class="railroad-diagram" width="256.5" height="112" viewBox="0 0 256.5 112" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 54v20m0 -10h20"></path>
+</g>
+<path d="M40 64h10"></path>
+<g>
+<path d="M50 64h0"></path>
+<path d="M206.5 64h0"></path>
+<rect x="50" y="36" width="156.5" height="56" rx="10" ry="10" class="group-box"></rect>
+<g>
+<path d="M50 64h0"></path>
+<path d="M206.5 64h0"></path>
+<path d="M50 64a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M70 44h116.5"></path>
+</g>
+<path d="M186.5 44a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M50 64h20"></path>
+<g>
+<path d="M70 64h0"></path>
+<path d="M186.5 64h0"></path>
+<path d="M80 64a10 10 0 0 0 -10 10v0a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M80 84h96.5"></path>
+</g>
+<path d="M176.5 84a10 10 0 0 0 10 -10v0a10 10 0 0 0 -10 -10"></path>
+<path d="M70 64h10"></path>
+<path d="M176.5 64h10"></path>
+<g class="terminal ">
+<path d="M80 64h0"></path>
+<path d="M176.5 64h0"></path>
+<rect x="80" y="53" width="96.5" height="22" rx="10" ry="10"></rect>
+<text x="128.25" y="68">&#91; \t\n\r&#93;</text>
+</g>
+</g>
+<path d="M186.5 64h20"></path>
+</g>
+<g class="comment ">
+<path d="M50 28h0"></path>
+<path d="M158 28h0"></path>
+<text x="104" y="33" class="comment">ws(whitespace)</text>
+</g>
+</g>
+<path d="M206.5 64h10"></path>
+<path d="M 216.5 64 h 20 m 0 -10 v 20"></path>
+</g>
+<style>
+	svg {
+		background-color: hsl(30,20%,95%);
+	}
+	path {
+		stroke-width: 3;
+		stroke: black;
+		fill: rgba(0,0,0,0);
+	}
+	text {
+		font: bold 14px monospace;
+		text-anchor: middle;
+		white-space: pre;
+	}
+	text.diagram-text {
+		font-size: 12px;
+	}
+	text.diagram-arrow {
+		font-size: 16px;
+	}
+	text.label {
+		text-anchor: start;
+	}
+	text.comment {
+		font: italic 12px monospace;
+	}
+	g.non-terminal text {
+		/*font-style: italic;*/
+	}
+	rect {
+		stroke-width: 3;
+		stroke: black;
+		fill: hsl(120,100%,90%);
+	}
+	rect.group-box {
+		stroke: gray;
+		stroke-dasharray: 10 5;
+		fill: none;
+	}
+	path.diagram-text {
+		stroke-width: 3;
+		stroke: black;
+		fill: white;
+		cursor: help;
+	}
+	.decision path {
+    fill: #ccc;
+  }
+	g.diagram-text:hover path.diagram-text {
+		fill: #eee;
+	}</style>
+</svg>

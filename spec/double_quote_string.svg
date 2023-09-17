@@ -1,0 +1,131 @@
+<svg class="railroad-diagram" width="572" height="141" viewBox="0 0 572 141" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(.5 .5)">
+<g>
+<path d="M20 54v20m0 -10h20"></path>
+</g>
+<path d="M40 64h10"></path>
+<g>
+<path d="M50 64h0"></path>
+<path d="M522 64h0"></path>
+<rect x="50" y="36" width="472" height="85" rx="10" ry="10" class="group-box"></rect>
+<g>
+<path d="M50 64h10"></path>
+<path d="M512 64h10"></path>
+<path d="M114 64h10"></path>
+<g class="terminal ">
+<path d="M60 64h0"></path>
+<path d="M114 64h0"></path>
+<rect x="60" y="53" width="54" height="22" rx="10" ry="10"></rect>
+<text x="87" y="68">"\""</text>
+</g>
+<g>
+<path d="M124 64h0"></path>
+<path d="M448 64h0"></path>
+<path d="M124 64a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M144 44h284"></path>
+</g>
+<path d="M428 44a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M124 64h20"></path>
+<g>
+<path d="M144 64h0"></path>
+<path d="M428 64h0"></path>
+<path d="M154 64a10 10 0 0 0 -10 10v29a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M154 113h264"></path>
+</g>
+<path d="M418 113a10 10 0 0 0 10 -10v-29a10 10 0 0 0 -10 -10"></path>
+<path d="M144 64h10"></path>
+<path d="M418 64h10"></path>
+<g>
+<path d="M154 64h0"></path>
+<path d="M418 64h0"></path>
+<path d="M154 64h20"></path>
+<g class="non-terminal ">
+<path d="M174 64h46.75"></path>
+<path d="M351.25 64h46.75"></path>
+<rect x="220.75" y="53" width="130.5" height="22"></rect>
+<text x="286" y="68">escape_string</text>
+</g>
+<path d="M398 64h20"></path>
+<path d="M154 64a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g class="non-terminal ">
+<path d="M174 94h0"></path>
+<path d="M398 94h0"></path>
+<rect x="174" y="83" width="224" height="22"></rect>
+<text x="286" y="98">double_quote_char_string</text>
+</g>
+<path d="M398 94a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+</g>
+<path d="M428 64h20"></path>
+</g>
+<path d="M448 64h10"></path>
+<g class="terminal ">
+<path d="M458 64h0"></path>
+<path d="M512 64h0"></path>
+<rect x="458" y="53" width="54" height="22" rx="10" ry="10"></rect>
+<text x="485" y="68">"\""</text>
+</g>
+</g>
+<g class="comment ">
+<path d="M50 28h0"></path>
+<path d="M193 28h0"></path>
+<text x="121.5" y="33" class="comment">double_quote_string</text>
+</g>
+</g>
+<path d="M522 64h10"></path>
+<path d="M 532 64 h 20 m 0 -10 v 20"></path>
+</g>
+<style>
+	svg {
+		background-color: hsl(30,20%,95%);
+	}
+	path {
+		stroke-width: 3;
+		stroke: black;
+		fill: rgba(0,0,0,0);
+	}
+	text {
+		font: bold 14px monospace;
+		text-anchor: middle;
+		white-space: pre;
+	}
+	text.diagram-text {
+		font-size: 12px;
+	}
+	text.diagram-arrow {
+		font-size: 16px;
+	}
+	text.label {
+		text-anchor: start;
+	}
+	text.comment {
+		font: italic 12px monospace;
+	}
+	g.non-terminal text {
+		/*font-style: italic;*/
+	}
+	rect {
+		stroke-width: 3;
+		stroke: black;
+		fill: hsl(120,100%,90%);
+	}
+	rect.group-box {
+		stroke: gray;
+		stroke-dasharray: 10 5;
+		fill: none;
+	}
+	path.diagram-text {
+		stroke-width: 3;
+		stroke: black;
+		fill: white;
+		cursor: help;
+	}
+	.decision path {
+    fill: #ccc;
+  }
+	g.diagram-text:hover path.diagram-text {
+		fill: #eee;
+	}</style>
+</svg>
